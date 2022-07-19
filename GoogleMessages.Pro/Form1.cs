@@ -51,7 +51,7 @@ namespace GoogleMessages.Pro
                 msg("Phones's Null");
                 return;
             }
-              
+           listView1.Items.Clear();
            new Action(() => {
                driver.Navigate().GoToUrl("https://messages.google.com/web/conversations/new?mode=add-people");
                Thread.Sleep(2000);
