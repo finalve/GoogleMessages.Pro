@@ -26,8 +26,8 @@ namespace GoogleMessages.Pro
         {
             if (!isAuth)
             {
-                driver.Quit();
-                Application.Exit();
+               driver.Quit();
+               Application.Exit();
             }
                
         }
@@ -38,8 +38,10 @@ namespace GoogleMessages.Pro
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 phones = File.ReadAllLines(openFileDialog1.FileName).ToList();
+                phones.ForEach((_phone) => {
+                    listView2.Items.Add(_phone);
+                });
             }
-          
         }
 
         private void button2_Click(object sender, EventArgs e)
